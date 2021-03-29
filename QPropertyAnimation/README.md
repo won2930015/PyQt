@@ -1,6 +1,14 @@
 # QPropertyAnimation
 
-# 1、窗口淡入淡出
+- 目录
+  - [窗口淡入淡出](#1窗口淡入淡出)
+  - [右键菜单动画](#2右键菜单动画)
+  - [点阵特效](#3点阵特效)
+  - [页面切换/图片轮播动画](#4页面切换图片轮播动画)
+  - [窗口抖动](#5窗口抖动)
+  - [窗口翻转动画（仿QQ）](#6窗口翻转动画仿QQ)
+
+## 1、窗口淡入淡出
 [运行 FadeInOut.py](FadeInOut.py)
 
 1. 使用`QPropertyAnimation`对窗口的`windowOpacity`透明度属性进行修改
@@ -13,7 +21,7 @@
 
 ![FadeInOut](ScreenShot/FadeInOut.gif)
    
-# 2、右键菜单动画
+## 2、右键菜单动画
 [运行 MenuAnimation.py](MenuAnimation.py)
 
 1. 使用`QPropertyAnimation`对菜单控件的`geometry`属性进行修改
@@ -96,7 +104,7 @@ def findClose(points):
 
 ![RlatticeEffect](ScreenShot/RlatticeEffect.gif)
 
-## 5、页面切换/图片轮播动画
+## 4、页面切换/图片轮播动画
 [运行 PageSwitching.py](PageSwitching.py)
 
 1. 使用`QPropertyAnimation`对`QStackedWidget`中的子控件进行pos位移操作实现动画切换特效
@@ -111,3 +119,21 @@ def findClose(points):
 1. `autoStart(msec)`  轮播模式, 默认是3000毫秒
 
 ![PageSwitching](ScreenShot/PageSwitching.gif)
+
+## 5、窗口抖动
+[运行 ShakeWindow.py](ShakeWindow.py)
+
+通过`QPropertyAnimation`对控件的pos属性进行死去活来的修改
+
+![ShakeWindow](ScreenShot/ShakeWindow.gif)
+
+## 6、窗口翻转动画（仿QQ）
+[运行 FlipWidgetAnimation.py](FlipWidgetAnimation.py)
+
+1. 用了两个`QLabel`来显示模拟的图片界面，并实现鼠标点击模拟真实的窗口对应位置点击
+2. 用了`QStackedWidget`来存放上面的两个界面`QLabel`
+3. 点击切换时主要是对上面的两个界面进行截图并传递给翻转动画窗口
+4. 通过`setWindowOpacity`控制主窗口的显示隐藏（保留任务栏），当然也可以用`hide`
+5. 动画窗口`FlipWidget.py`主要实现两张图片的翻转显示，考虑到0-90和90-180之前的情况，以及图片的缩放动画
+
+![FlipWidgetAnimation](ScreenShot/FlipWidgetAnimation.gif)

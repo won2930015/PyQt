@@ -1,6 +1,11 @@
 # QThread
 
-PyQt多线程的简单使用例子
+- 目录
+  - [继承QThread](#1继承QThread)
+  - [moveToThread](#2moveToThread)
+  - [线程挂起恢复](#3线程挂起恢复)
+  - [线程休眠唤醒](#4线程休眠唤醒)
+  - [线程退出](#5线程退出)
 
 ## 1、继承QThread
 [运行 InheritQThread.py](InheritQThread.py)
@@ -31,3 +36,10 @@ PyQt多线程的简单使用例子
 使用 `QWaitCondition` 的 `wait` 和 `wakeAll` 方法
 
 ![WakeupThread](ScreenShot/WakeupThread.gif)
+
+## 5、线程退出
+[运行 QuitThread.py](QuitThread.py)
+
+`isInterruptionRequested` 和 `requestInterruption` 函数作为退出标识调用
+
+![QuitThread](ScreenShot/QuitThread.jpg)

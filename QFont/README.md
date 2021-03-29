@@ -1,9 +1,11 @@
-# 字体测试
+# QFont
 
-### [Python3.4.4 or Python3.5][PyQt5]
+- 目录
+  - [加载自定义字体](#1加载自定义字体)
 
-### 其中Roboto字体通过TTF编辑器修改了family,方便QFont加载
+## 1、加载自定义字体
+[运行 AwesomeFont.py](AwesomeFont.py)
 
-# 截图
-![截图](ScreenShot/1.png)
-![截图](ScreenShot/2.png)
+通过`QFontDatabase.addApplicationFont`加载字体文件
+
+![AwesomeFont](ScreenShot/AwesomeFont.png)

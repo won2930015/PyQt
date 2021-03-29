@@ -3,6 +3,16 @@ __pycache__/
 *.py[co]
 *$py.class
 
+debug
+release
+.qmake.stash
+Makefile
+Makefile.Debug
+Makefile.Release
+
+Tmp
+Tmp/*
+
 # C extensions
 *.so
 
@@ -103,6 +113,10 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+.idea
+.settings
+.project
+.pydevproject
 *.pyc
 Tmps/*
 logs/*
@@ -116,6 +130,8 @@ log.txt
 /tmp/*
 /Tmps
 /Tmps/*
+cache/*
+cache/
 /tmp/Material
 /tmp/Material/*
 *.pyc

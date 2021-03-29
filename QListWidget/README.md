@@ -1,5 +1,12 @@
 # QListView
 
+- 目录
+  - [删除自定义Item](#1删除自定义Item)
+  - [自定义可拖拽Item](#2自定义可拖拽Item)
+  - [腾讯视频热播列表](#3腾讯视频热播列表)
+  - [仿折叠控件效果](#4仿折叠控件效果)
+  - [列表常用信号](#5列表常用信号)
+
 ## 1、删除自定义Item
 [运行 DeleteCustomItem.py](DeleteCustomItem.py)
 
@@ -37,3 +44,20 @@
 3. `setResizeMode(QListWidget.Adjust)`
 
 ![HotPlaylist](ScreenShot/HotPlaylist.gif)
+
+## 4、仿折叠控件效果
+[运行 FoldWidget.py](FoldWidget.py)
+
+1. 利用`QListWidget`设置Item的自定义控件
+2. `QListWidget`通过间隔设置`QPushButton`和`CustomWidget`来添加
+3. 绑定按钮的选中状态通过`setHidden`设置Item的隐藏和显示
+4. 自定义控件中尺寸发生变化后需要调用`adjustSize()`来同步
+
+![FoldWidget](ScreenShot/FoldWidget.gif)
+
+## 5、列表常用信号
+[运行 SignalsExample.py](SignalsExample.py)
+
+根据官网文档 https://doc.qt.io/qt-5/qlistwidget.html#signals 中的信号介绍编写
+
+![SignalsExample](ScreenShot/SignalsExample.gif)
